@@ -1,5 +1,5 @@
 #!/bin/bash
-# genscript.sh version 1.0.0
+# genscript.sh version 1.0.1
 
 ################################### Sobre ###################################
 # O genscript.sh é um programa simples que gera um Shell-Script com um modelo -
@@ -11,6 +11,13 @@
 NOME="$1"   # Guardando o primeiro parâmetro dentro da variável "NOME"
 
 ################################### Checks ###################################
+# Verifica se o parâmetro foi informado.
+if [ "$1" = 0 ]
+then
+    echo "Informe o nome do arquivo como parâmetro."
+    exit
+fi
+
 # Realizando teste para verificar se o arquivo já existe
 if [ -f $NOME ]
 then
@@ -31,13 +38,16 @@ then
 fi
 
 ################################### Funções ##################################
+clear           # Apagando a tela
 touch $NOME     # Criando o arquivo  
 
 echo "#!/bin/bash
 # $NOME version 1.0.0
 
 ################################### Sobre ###################################
-
+#
+#
+#
 
 ################################# Parâmetros #################################
 
@@ -52,3 +62,8 @@ echo "#!/bin/bash
 
 
 #################################### Logs ####################################" > "$NOME"
+
+chmod +x $NOME
+
+echo
+echo "O Script $NOME foi criado com sucesso!"
