@@ -12,9 +12,9 @@ NOME="$1"   # Guardando o primeiro parâmetro dentro da variável "NOME"
 
 ################################### Checks ###################################
 # Verifica se o parâmetro foi informado.
-if [ "$1" = 0 ]
+if [ "$1" = "" ]
 then
-    echo "Informe o nome do arquivo como parâmetro."
+    echo "Informe um nome para o arquivo como parâmetro."
     exit
 fi
 
