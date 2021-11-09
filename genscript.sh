@@ -4,7 +4,8 @@
 ################################### Sobre ###################################
 # O genscript.sh é um programa simples que gera um Shell-Script com um modelo -
 # padrão com informações passadas pelo usuário. 
-# Escrito em 03/11/2021 por Hyago de Jesus.
+# Escrito em: 03/11/2021.
+# Autor: Hyago de Jesus.
 # Este software é distribuido pela licença MIT e não dá nenhuma garantia.
 
 ################################# Parâmetros #################################
